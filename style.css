@@ -1,0 +1,414 @@
+/* 重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.nav-brand h2 {
+    color: #1e3a8a;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1e3a8a;
+}
+
+/* 头部区域 */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 价格卡片区域 */
+.pricing-section {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+    border-color: #7c3aed;
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-4px);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.price {
+    margin-bottom: 0.5rem;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.price-unit {
+    font-size: 1rem;
+    color: #64748b;
+    margin-left: 0.5rem;
+}
+
+.price-note {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.card-body {
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+.btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 功能对比区域 */
+.features-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 3rem;
+}
+
+.feature-group {
+    margin-bottom: 3rem;
+}
+
+.group-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.comparison-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:nth-child(even) {
+    background: #f8fafc;
+}
+
+.feature-name,
+.version-col {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.feature-name {
+    font-weight: 500;
+    color: #374151;
+}
+
+.version-col {
+    text-align: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* 页脚 */
+.footer {
+    background: #1e293b;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-4px);
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .table-header,
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .feature-name {
+        background: #f8fafc;
+        font-weight: 600;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .version-col {
+        padding: 0.5rem 1rem;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    
+    .version-col:before {
+        content: attr(data-version) ': ';
+        font-weight: 600;
+        color: #1e3a8a;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .pricing-card {
+        padding: 1.5rem;
+    }
+    
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .pricing-section,
+    .features-section {
+        padding: 2rem 0;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pricing-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.pricing-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.pricing-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pricing-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* 滚动效果 */
+.feature-group {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.feature-group.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
